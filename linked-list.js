@@ -103,6 +103,30 @@ export default class LinkedList {
     string += 'null';
     return string;
   }
+
+  insertAt(value, index) {
+    if (index === 0) {
+      let tmp = this.head();
+      this.firstNode = new Node(value, this.head());
+    } else {
+      let tmp = this.at(index - 1);
+      if (tmp !== null) {
+        tmp.nextNode = new Node(value, tmp.nextNode);
+      }
+    }
+  }
+
+  removeAt(index) {
+    if (index === 0) {
+      let tmp = this.head();
+      this.firstNode = tmp.nextNode;
+    } else {
+      let tmp = this.at(index - 1);
+      if (tmp !== null) {
+        tmp.nextNode = tmp.nextNode.nextNode;
+      }
+    }
+  }
 }
 
 const linkedList = new LinkedList(new Node('First'));
@@ -127,4 +151,8 @@ console.log();
 console.log(linkedList.find('Third'));
 console.log(linkedList.at(3));
 console.log();
+console.log(linkedList.toString());
+console.log(linkedList.insertAt('Inserted', 2));
+console.log(linkedList.toString());
+console.log(linkedList.removeAt(2));
 console.log(linkedList.toString());
