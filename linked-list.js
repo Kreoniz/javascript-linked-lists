@@ -1,12 +1,12 @@
 import Node from './node.js';
 
 export default class LinkedList {
-  constructor(head) {
-    this.head = head;
+  constructor(node) {
+    this.firstNode = node;
   }
 
   append(value) {
-    let tmp = this.head;
+    let tmp = this.firstNode;
     while (tmp.nextNode != null) {
       tmp = tmp.nextNode;
     }
@@ -14,12 +14,12 @@ export default class LinkedList {
   }
 
   prepend(value) {
-    let tmp = this.head;
-    this.head = new Node(value, tmp);
+    let tmp = this.firstNode;
+    this.firstNode = new Node(value, tmp);
   }
 
   size() {
-    let tmp = this.head;
+    let tmp = this.firstNode;
     let length = 1;
     while (tmp.nextNode != null) {
       tmp = tmp.nextNode;
@@ -28,13 +28,29 @@ export default class LinkedList {
 
     return length;
   }
+
+  head() {
+    return this.firstNode;
+  }
+
+  tail() {
+    let tmp = this.firstNode;
+    while (tmp.nextNode != null) {
+      tmp = tmp.nextNode;
+    }
+
+    return tmp;
+  }
 }
 
 const linkedList = new LinkedList(new Node('First'));
 linkedList.append('Second');
 linkedList.append('Third');
 
+linkedList.append('Appended');
 linkedList.prepend('Prepended');
 
 console.log(linkedList.size());
 console.log(linkedList);
+console.log();
+console.log(linkedList.head(), linkedList.tail());
