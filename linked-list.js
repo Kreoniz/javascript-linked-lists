@@ -128,31 +128,3 @@ export default class LinkedList {
     }
   }
 }
-
-const linkedList = new LinkedList(new Node('First'));
-linkedList.append('Second');
-linkedList.append('Third');
-
-linkedList.append('Appended');
-linkedList.prepend('Prepended');
-
-console.log(linkedList.size());
-console.log(linkedList);
-console.log();
-console.log(linkedList.head(), linkedList.tail());
-console.log();
-console.log(linkedList.at(5));
-console.log();
-console.log(linkedList.pop());
-console.log();
-console.log(linkedList.contains('Second'));
-console.log(linkedList.contains('Value'));
-console.log();
-console.log(linkedList.find('Third'));
-console.log(linkedList.at(3));
-console.log();
-console.log(linkedList.toString());
-console.log(linkedList.insertAt('Inserted', 2));
-console.log(linkedList.toString());
-console.log(linkedList.removeAt(2));
-console.log(linkedList.toString());
