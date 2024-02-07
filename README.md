@@ -17,4 +17,4 @@ This is a JavaScript implementation of linked lists
 7. `pop` removes the last element from the list
 8. `contains(value)` returns true if the passed in value is in the list and otherwise returns false.
 9. `find(value)` returns the index of the node containing value, or null if not found.
-10. `toString` represents your LinkedList objects as strings, so you can print them out and preview them in the console. The format should be: ( value ) -> ( value ) -> ( value ) -> null
+10. `toString` represents LinkedList objects as strings. The is: ( value ) -> ( value ) -> ( value ) -> null
