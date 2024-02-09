@@ -2,7 +2,7 @@
   "name": "javascript-linked-lists",
   "exports": {
     "node": "./node.js",
-    "linked-list": "./linked-list.js",
+    "linked-list": "./linked-list.js"
   },
   "version": "1.0.0",
   "type": "module",
