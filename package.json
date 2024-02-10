@@ -1,13 +1,13 @@
 {
   "name": "javascript-linked-lists",
   "exports": {
-    "node": "./node.js",
-    "linked-list": "./linked-list.js"
+    "./node": "./node.js",
+    "./linked-list": "./linked-list.js"
   },
-  "version": "1.0.3",
+  "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "./linked-list.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
