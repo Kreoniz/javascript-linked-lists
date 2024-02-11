@@ -1,10 +1,10 @@
 {
-  "name": "javascript-linked-lists",
+  "name": "singly-linked-lists",
   "exports": {
     "./node": "./node.js",
     "./linked-list": "./linked-list.js"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "",
   "main": "./linked-list.js",
